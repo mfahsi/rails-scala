@@ -4,19 +4,23 @@ import com.winova.core.graph.*
 import com.winova.rails.domain.RailNetwork.{RailNetworkGraph, RailStation}
 import com.winova.rails.domain.{RailNetwork, RailNetworkConfig}
 import com.winova.rails.graph.ShortestPathAlgo
+import org.scalatest.Ignore
 import org.scalatest.concurrent.IntegrationPatience
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should
 import org.scalatest.concurrent.TimeLimitedTests
 import org.scalatest.time.Span
+
 import scala.collection.mutable.ListBuffer
-import org.scalatest.time.SpanSugar._
+import org.scalatest.time.SpanSugar.*
+
 import scala.language.postfixOps
 
 /**
  * we will do a simle and quick check that system works with 10 times current input data.
  */
 
+@Ignore
 class CapacityAndPerfCheckTest extends AnyFlatSpec with should.Matchers with TimeLimitedTests {
 
   val timeLimit = 8000 millis

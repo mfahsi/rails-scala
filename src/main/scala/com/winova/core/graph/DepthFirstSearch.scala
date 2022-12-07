@@ -39,7 +39,6 @@ object DepthFirstSearch {
         logger.debug("terminating at {}",currentPath)
         val R = visitAction.apply(currentPath)
         if (R.isDefined) { // Note : we are not ending at target to allow cycles
-          println(currentPath)
           ListBuffer(R.get).toList
         } else {
           ListBuffer().toList
@@ -52,8 +51,7 @@ object DepthFirstSearch {
           depthFirstEdgeVisitorWithTerminationPredicateRec(nextPath, visitAction)
         }).flatten.toList
         if (r.isDefined) {
-          println(currentPath)
-          result.prepended(r.get)
+           result.prepended(r.get)
         } else {
           result
         }

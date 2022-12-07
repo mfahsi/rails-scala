@@ -1,6 +1,8 @@
 *.class
 *.log
+*.log.gz
 *.class
+log/*
 
 # bloop and metals
 .bloop
